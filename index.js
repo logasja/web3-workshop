@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './styles/index.scss'
-import IPFS from 'ipfs'
+import IPFS from 'ipfs-core'
 import store from './PlaylistsStore'
 import Playlists from './Playlists'
 import Playlist from './Playlist'
@@ -15,12 +15,13 @@ class App extends React.Component{
         preload: { "enabled": false },
         config: {
           Addresses: {
-            Swarm: ["/dns4/ws-star.discovery.libp2p.io/tcp/443/wss/p2p-websocket-star"]
+            Swarm: ["/dns4/young-hollows-62849.herokuapp.com/tcp/443/wss/p2p-webrtc-star/"]
           },
           Bootstrap: ["/ip4/10.220.3.64/tcp/4002/ws/ipfs/QmTLJ3rHiqtcitBRhPv8enSHmhZahCF7heYQvKkWvBfGVq"] //connect workshop peers
         }
       })
-      await store.connect(ipfs)
+      await store.connect(ipfs);
+      console.log("odb id:", store.odb.identity.id);
     }
 
     render(){
