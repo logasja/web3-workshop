@@ -1,5 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin =  require('html-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry : './index.js',
@@ -22,10 +24,13 @@ module.exports = {
     mode:'development',
     plugins : [
         new HtmlWebpackPlugin ({
-            Buffer: ['buffer', 'Buffer'],
-            process: 'process/browser',
             title: 'Development',
             template : './index.html'
+        }),
+        new NodePolyfillPlugin(),
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+            process: 'process/browser'
         })
     ]
 }

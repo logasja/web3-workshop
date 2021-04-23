@@ -8,6 +8,9 @@ Then, to begin the webpack server run the command `npm start`. We'll keep this r
 
 We will be building a playlist app on OrbitDB to share music lists with friends.
 
+## Creating the IPFS webrtc-star discovery server with Heroku
+Follow the instructions [here](https://suda.pl/free-webrtc-star-heroku/) to spin up your very own webrtc discovery server for free. The signaling server address is what you will place into the swarm array in index.js. There are other free to use alternatives but this seems to be the most future-proof approach at the moment.
+
 ## Creating the store
 
 `$ touch PlaylistsStore.js`

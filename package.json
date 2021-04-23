@@ -48,7 +48,7 @@
       ]
     ]
   },
-  "browser": { 
+  "browser": {
     "fs": false,
     "path": false,
     "os": false
@@ -57,6 +57,7 @@
     "ipfs-core": "^0.5.4",
     "mobx": "^6.2.0",
     "mobx-react": "^7.1.0",
+    "node-polyfill-webpack-plugin": "^1.1.0",
     "orbit-db": "^0.26.1",
     "orbit-db-identity-provider": "^0.3.1",
     "react": "^17.0.2",
