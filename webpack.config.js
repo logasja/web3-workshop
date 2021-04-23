@@ -22,9 +22,10 @@ module.exports = {
     mode:'development',
     plugins : [
         new HtmlWebpackPlugin ({
+            Buffer: ['buffer', 'Buffer'],
+            process: 'process/browser',
             title: 'Development',
             template : './index.html'
         })
     ]
-
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './styles/index.scss'
-import IPFS from 'ipfs'
+import IPFS from 'ipfs-core'
 import store from './PlaylistsStore'
 
 class App extends React.Component{

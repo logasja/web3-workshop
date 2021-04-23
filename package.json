@@ -48,6 +48,11 @@
       ]
     ]
   },
+  "browser": { 
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
     "ipfs-core": "^0.5.4",
     "mobx": "^6.2.0",
